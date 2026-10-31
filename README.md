@@ -146,7 +146,7 @@ FROM contact_requests
 ORDER BY created_at DESC;
 ```
 
-Para testar no Insomnia, envie `POST http://localhost:3000/auth/login` usando os valores configurados no `.env`:
+Para testar, envie `POST http://localhost:3000/auth/login` usando os valores configurados no `.env`:
 
 ```json
 {
@@ -157,7 +157,7 @@ Para testar no Insomnia, envie `POST http://localhost:3000/auth/login` usando os
 
 Mantenha o cookie `fleetmonitor_session` recebido e teste `GET /auth/me` ou as rotas de veículos. O Insomnia pode manter o cookie automaticamente no cookie jar. `POST /auth/logout` invalida a sessão.
 
-No DBeaver, consulte `auth_users` para demonstrar o cadastro persistido:
+Consulte `auth_users` para demonstrar o cadastro persistido:
 
 ```sql
 SELECT id, email, company_name, password_hash, created_at
